@@ -23,6 +23,8 @@
 		E6C2C943176FBBB9002300C4 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C2C942176FBBB9002300C4 /* libsqlite3.dylib */; };
 		E6C2C945176FBBC1002300C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C2C944176FBBC1002300C4 /* Security.framework */; };
 		E6C2C947176FBBC7002300C4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C2C946176FBBC7002300C4 /* Social.framework */; };
+		E6C2C97A176FBDC8002300C4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C2C978176FBDC8002300C4 /* MainViewController.m */; };
+		E6C2C97B176FBDC8002300C4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C2C979176FBDC8002300C4 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,9 @@
 		E6C2C942176FBBB9002300C4 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E6C2C944176FBBC1002300C4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E6C2C946176FBBC7002300C4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E6C2C977176FBDC8002300C4 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		E6C2C978176FBDC8002300C4 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		E6C2C979176FBDC8002300C4 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,9 @@
 			children = (
 				E6C2C92C176FBAAB002300C4 /* AppDelegate.h */,
 				E6C2C92D176FBAAB002300C4 /* AppDelegate.m */,
+				E6C2C977176FBDC8002300C4 /* MainViewController.h */,
+				E6C2C978176FBDC8002300C4 /* MainViewController.m */,
+				E6C2C979176FBDC8002300C4 /* MainViewController.xib */,
 				E6C2C924176FBAAB002300C4 /* Supporting Files */,
 			);
 			path = iOSFBTutorial2;
@@ -182,6 +190,7 @@
 				E6C2C932176FBAAB002300C4 /* Default@2x.png in Resources */,
 				E6C2C934176FBAAB002300C4 /* Default-568h@2x.png in Resources */,
 				E6C2C93D176FBB6B002300C4 /* FacebookSDKResources.bundle in Resources */,
+				E6C2C97B176FBDC8002300C4 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +203,7 @@
 			files = (
 				E6C2C92A176FBAAB002300C4 /* main.m in Sources */,
 				E6C2C92E176FBAAB002300C4 /* AppDelegate.m in Sources */,
+				E6C2C97A176FBDC8002300C4 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
