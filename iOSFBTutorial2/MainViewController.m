@@ -14,6 +14,8 @@
 
 @implementation MainViewController
 
+@synthesize authButton;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,14 +29,42 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    //Register for NSNotification
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionStateChanged:) name:FBSessionStateChangedNotification object:nil];
+    
+    //Check if the user is already logged in from a cached session
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate openSessionWithAllowLoginUI:NO];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (IBAction)authButtonAction:(id)sender {
+//Method that refers to appDelegate and calls login method
+- (IBAction)authButtonAction:(id)sender
+{
+
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    if ([[FBSession activeSession] isOpen]) {
+        [appDelegate closeSession];
+    } else {
+        [appDelegate openSessionWithAllowLoginUI:YES];
+    }
 }
+
+//Method to handle FB session changes for this view
+- (void)sessionStateChanged:(NSNotification *)notification
+{
+    if ([[FBSession activeSession] isOpen]) {
+        [authButton setTitle:@"Logout" forState:UIControlStateNormal];
+    } else {
+        [authButton setTitle:@"Login" forState:UIControlStateNormal];
+    }
+}
+
 @end

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
 @interface MainViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *authButton;
 
 - (IBAction)authButtonAction:(id)sender;
 

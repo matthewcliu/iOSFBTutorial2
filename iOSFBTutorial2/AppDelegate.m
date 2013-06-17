@@ -61,7 +61,7 @@ NSString *const FBSessionStateChangedNotification = @"com.unicyclelabs.iOSFBTuto
 - (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI
 {
     //Create an array of permissions we want
-    NSArray *permissions = [NSArray arrayWithObjects:@"basic_info", @"email",@"user_likes" nil];
+    NSArray *permissions = [NSArray arrayWithObjects:@"basic_info", @"email",@"user_likes", nil];
     
     return [FBSession openActiveSessionWithReadPermissions:permissions allowLoginUI: allowLoginUI completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
         [self sessionStateChanged:session state:state error:error];
@@ -101,6 +101,11 @@ NSString *const FBSessionStateChangedNotification = @"com.unicyclelabs.iOSFBTuto
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     return [[FBSession activeSession] handleOpenURL:url];
+}
+
+- (void)closeSession
+{
+    [[FBSession activeSession] closeAndClearTokenInformation];
 }
 
 @end
