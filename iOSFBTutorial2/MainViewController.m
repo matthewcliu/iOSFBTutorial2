@@ -10,6 +10,9 @@
 
 @interface MainViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *publishButton;
+- (IBAction)publishButtonAction:(id)sender;
+
 @end
 
 @implementation MainViewController
@@ -61,10 +64,16 @@
 - (void)sessionStateChanged:(NSNotification *)notification
 {
     if ([[FBSession activeSession] isOpen]) {
+        [_publishButton setHidden:NO];
         [authButton setTitle:@"Logout" forState:UIControlStateNormal];
     } else {
+        [_publishButton setHidden:YES];
         [authButton setTitle:@"Login" forState:UIControlStateNormal];
     }
 }
 
+- (IBAction)publishButtonAction:(id)sender {
+    ShareViewController *viewController = [[ShareViewController alloc] initWithNibName:@"ShareViewController" bundle:nil];
+    [self presentViewController:viewController animated:YES completion:nil];
+}
 @end

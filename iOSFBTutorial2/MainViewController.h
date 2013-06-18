@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "ShareViewController.h"
 
 @interface MainViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *authButton;

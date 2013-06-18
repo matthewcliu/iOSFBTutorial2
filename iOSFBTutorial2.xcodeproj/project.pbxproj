@@ -25,6 +25,8 @@
 		E6C2C947176FBBC7002300C4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C2C946176FBBC7002300C4 /* Social.framework */; };
 		E6C2C97A176FBDC8002300C4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C2C978176FBDC8002300C4 /* MainViewController.m */; };
 		E6C2C97B176FBDC8002300C4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C2C979176FBDC8002300C4 /* MainViewController.xib */; };
+		E6C2C97F176FE9D2002300C4 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C2C97D176FE9D2002300C4 /* ShareViewController.m */; };
+		E6C2C980176FE9D2002300C4 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C2C97E176FE9D2002300C4 /* ShareViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,9 @@
 		E6C2C977176FBDC8002300C4 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		E6C2C978176FBDC8002300C4 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		E6C2C979176FBDC8002300C4 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		E6C2C97C176FE9D2002300C4 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		E6C2C97D176FE9D2002300C4 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		E6C2C97E176FE9D2002300C4 /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,9 @@
 				E6C2C977176FBDC8002300C4 /* MainViewController.h */,
 				E6C2C978176FBDC8002300C4 /* MainViewController.m */,
 				E6C2C979176FBDC8002300C4 /* MainViewController.xib */,
+				E6C2C97C176FE9D2002300C4 /* ShareViewController.h */,
+				E6C2C97D176FE9D2002300C4 /* ShareViewController.m */,
+				E6C2C97E176FE9D2002300C4 /* ShareViewController.xib */,
 				E6C2C924176FBAAB002300C4 /* Supporting Files */,
 			);
 			path = iOSFBTutorial2;
@@ -191,6 +199,7 @@
 				E6C2C934176FBAAB002300C4 /* Default-568h@2x.png in Resources */,
 				E6C2C93D176FBB6B002300C4 /* FacebookSDKResources.bundle in Resources */,
 				E6C2C97B176FBDC8002300C4 /* MainViewController.xib in Resources */,
+				E6C2C980176FE9D2002300C4 /* ShareViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +213,7 @@
 				E6C2C92A176FBAAB002300C4 /* main.m in Sources */,
 				E6C2C92E176FBAAB002300C4 /* AppDelegate.m in Sources */,
 				E6C2C97A176FBDC8002300C4 /* MainViewController.m in Sources */,
+				E6C2C97F176FE9D2002300C4 /* ShareViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +336,7 @@
 				E6C2C939176FBAAB002300C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
